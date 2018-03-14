@@ -1,0 +1,50 @@
+/* Stylesheet for restaurant/index.html, menu.html, contactUs.html */
+
+/* Universal Styles */
+
+        body {
+                width: 600px;  margin: 20px auto; padding: 20px; border: 1px solid black;
+        }
+
+        .footer {
+                text-align: center;
+        }
+
+/* Link Styles */
+
+        a:link {
+                color: DodgerBlue;
+        }
+
+        a:visited {
+                color: purple
+        }
+
+        a:hover {
+                color: gold
+        }
+
+        a:active {
+                font-weight: bold;
+        }
+
+/* index.html styles */
+
+
+
+/* menu.html styles */
+
+        .main {
+                text-align: center;
+        }
+
+        #dinnerMenu {
+                margin-left: auto;
+                margin-right: auto;
+        }
+
+/* contactUs.html styles */
+
+        .fieldName {
+                text-align: right;
+        }
