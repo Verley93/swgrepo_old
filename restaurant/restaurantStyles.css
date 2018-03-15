@@ -10,37 +10,94 @@
                 text-align: center;
         }
 
+        hr {
+                border-top: 3px double #8C8B8B;
+        }
+
+        .navigation {
+                        padding: 5px;
+                        margin: auto;
+        }
+
+        .navigation td {
+                padding: 0px 10px;
+        }
+
+        td {
+                /*padding: 5px;*/
+        }
+
+        h1, h2, h3 {
+                text-align: center;
+                font-family: Century;
+        }
+
 /* Link Styles */
 
         a:link {
-                color: DodgerBlue;
+                color: dodgerBlue;
         }
 
         a:visited {
-                color: purple
+                color: darkRed;
         }
 
         a:hover {
-                color: gold
+                font-weight: bold;
         }
 
         a:active {
-                font-weight: bold;
+                color: gold;
+                text-decoration: none;
         }
 
 /* index.html styles */
 
+        #main {
+                background-color: rgba(201, 185, 159, 0.5);     /*   Dust by COLOURlovers      */
+        }
 
+        img {
+                width: 575px;
+                height: 337.5px;
+                display: block;
+                margin: auto;
+                padding: 10px;
+        }
+
+        #description p {
+                padding: 10px;
+        }
+
+        p {
+                text-align: center;
+        }
 
 /* menu.html styles */
 
         .main {
                 text-align: center;
+                background-color: rgba(201, 185, 159, 0.5);     /*   Dust by COLOURlovers      */
+                padding: 5px 20px;
+        }
+
+        .main hr {
+                border: 1px solid;
         }
 
         #dinnerMenu {
-                margin-left: auto;
-                margin-right: auto;
+                margin: auto;
+                border-radius: 4px;
+                padding: 0px 20px;
+        }
+
+        #beverageMenu {
+                margin: auto;
+                border-radius: 4px;
+        }
+
+        #beverageMenu td {
+                padding: 0px 20px;
         }
 
 /* contactUs.html styles */
@@ -48,3 +105,7 @@
         .fieldName {
                 text-align: right;
         }
+
+        /*input required {
+                font-weight: bold;
+        }*/

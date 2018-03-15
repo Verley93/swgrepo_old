@@ -11,30 +11,30 @@
                 <h1>The Dining Room Restaurant & Bar</h1>
 
                 <div id="navigation">
-                        <hr style="border-top: 3px double #8C8B8B">
-                        <table cellspacing="10px">
+                        <hr>
+                        <table class="navigation">
                                 <tr>
-                                        <td><a href="index.html">Home</a></td>
-                                        <td><a href="menu.html">Menu</a></td>
-                                        <td><a href="contactUs.html">Contact Us</a></td>
+                                        <td><a href="index.html" target="_blank">Home</a></td>
+                                        <td><a href="menu.html" target="_blank">Menu</a></td>
+                                        <td><a href="contactUs.html" target="_blank">Contact Us</a></td>
                                 </tr>
                         </table>
-                        <hr style="border-top: 3px double #8C8B8B">
+                        <hr>
                 </div>
 
                 <form class="contactForm" action="submit.html" method="post">
-                        <table cellspacing="10px">
+                        <table>
                                 <tr>
                                         <td class="fieldName"><label for="fullName">Name: </label></td>
-                                        <td><input type="text" id="fullName" name="fullName"></td>
+                                        <td><input type="text" id="fullName" name="fullName" required></td>
                                 </tr>
                                 <tr>
                                         <td class="fieldName"><label for="email">Email: </label></td>
-                                        <td><input type="text" id="email" name="email"></td>
+                                        <td><input type="text" id="email" name="email" required></td>
                                 </tr>
                                 <tr>
                                         <td class="fieldName"><label for="phone">Phone: </label></td>
-                                        <td><input type="text" id="phone" name="phone"></td>
+                                        <td><input type="text" id="phone" name="phone" required></td>
                                 </tr>
                                 <tr>
                                         <td class="fieldName"><label for="inquiry">Reason for Inquiry: </label></td>
