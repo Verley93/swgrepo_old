@@ -2,48 +2,108 @@
 <html>
         <head>
                 <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <title>The Dining Room Restaurant & Bar - Home</title>
         </head>
 
-        <script type="text/javascript" src="testHideLinks.js">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        </script>
-
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <body>
-                <h1>The Dining Room Restaurant & Bar</h1>
-
-                <div id="navigation">
-                        <hr>
-                        <table class="navigation">
-                                <tr>
-                                        <td><a href="index.html" target="_blank">Home</a></td>
-                                        <td><a href="menu.html" target="_blank">Menu</a></td>
-                                        <td><a href="contactUs.html" target="_blank">Contact Us</a></td>
-                                </tr>
-                        </table>
-                        <hr>
+        <body class="container-fluid col-md-8">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning!</strong> The features of this website may not be available if JavaScript is disabled in your browser.
                 </div>
 
-                <div id="main">
-                        <div class="image">
-                                <img src="thediningroom.jpg" alt="The Dining Room's Dining Room">
+                <h1 class="display-3 text-center">The Dining Room Restaurant & Bar</h1><br>
+
+                <!--    Nav    -->
+                <ul class="nav nav-tabs mb-3">
+                        <li class="nav-item">
+                        <a class="nav-link active" href="index.html" target="_self">
+                                <svg xmlns="home.svg" width="20" height="15" viewBox="0 0 8 8">
+                                        <path d="M4 0l-4 3h1v4h2v-2h2v2h2v-4.03l1 .03-4-3z" />
+                                </svg>
+                        </a></li>
+
+                        <li class="nav-item">
+                        <a class="nav-link " href="Menu.html" target="_self">Menu</a> </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html" target="_self">Contact Us</a> </li>
+                </ul>
+
+                <!--    Carousel Main    -->
+                <div class="text-center" id="main">
+                        <div id="news" class="carousel slide" data-ride="carousel">
+                                <!--    Indicators    -->
+                                <ul class="carousel-indicators">
+                                        <li data-target="#news" data-slide-to="0" class="active"></li>
+                                        <li data-target="#news" data-slide-to="1"></li>
+                                        <li data-target="#news" data-slide-to="2"></li>
+                                </ul>
+
+                                <!--    Slideshow    -->
+                                <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                                <img class="d-block w-100" src="images/newRestaurant.jpg" alt="Dinning Area Section" height="500">
+                                                <div class="carousel-caption">
+                                                        <h4>New Location!</h4>
+                                                        <p>Swing by the North End and see us.</p>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <img class="d-block w-100" src="images/newMenu.jpg" alt="Burgers" height="500">
+                                                <div class="carousel-caption">
+                                                        <h4>New Seasonal Menu Rollout!</h4>
+                                                        <p>Now offered at both locations.</p>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <img class="d-block w-100" src="images/specialBrew.jpg" alt="SG Special Brew" height="500">
+                                                <div class="carousel-caption">
+                                                        <h4>Drink of the Month</h4>
+                                                        <p>SG Special Brew</p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!--    Left and right controls    -->
+                                <a class="carousel-control-prev" href="#news" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#news" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"s></span>
+                                </a>
                         </div>
 
-                        <div id="description">
-                                <h2>Restaurant Description</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor nunc leo. Nunc molestie id odio eget elementum. Nulla facilisi. Aliquam gravida diam nec est congue vulputate. Donec rutrum nunc in erat maximus consequat imperdiet et ante. Fusce vel orci vel arcu vehicula mattis. Vivamus in lorem vestibulum, suscipit mi eu, maximus augue. Nunc diam ipsum, porttitor ac arcu in, euismod aliquet nulla. Aenean ac erat quis metus finibus posuere. In hac habitasse platea dictumst. Ut commodo accumsan sem et commodo. Nunc eget tortor et mauris luctus mollis at eu lorem.</p>
+                                <!--    New Location Jumbo    -->
+                                <div class="jumbotron jumbotron-fluid my-3">
+                                        <div class="container">
+                                                <h1 class="display-4 text-center">We've got a new location!</h1>
+                                                <p class="lead text-center">Come check us out in the North End at 676 N. 4th Avenue, Apolis, MN 55556.  We're offering a special grand opening menu for a limited time!</p>
+                                        </div>
+                                </div>
+
+                                <img src="images/thediningroom.jpg" class="img-fluid m-auto p-auto" alt="The Dinning Room's Dinning Room">
+
+                                <div id="description">
+                                        <h2 class="display-4">Restaurant Description</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tempor nunc leo. Nunc molestie id odio eget elementum. Nulla facilisi. Aliquam gravida diam nec est congue vulputate. Donec rutrum nunc in erat maximus consequat imperdiet et ante. Fusce vel orci vel arcu vehicula mattis. Vivamus in lorem vestibulum, suscipit mi eu, maximus augue. Nunc diam ipsum, porttitor ac arcu in, euismod aliquet nulla. Aenean ac erat quis metus finibus posuere. In hac habitasse platea dictumst. Ut commodo accumsan sem et commodo. Nunc eget tortor et mauris luctus mollis at eu lorem.</p>
+                                </div>
                         </div>
-                </div>
+
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         </body>
 
-        <div class="footer">
+        <!--    Footer    -->
+        <footer  class="footer-copyright py-3 text-center">
                 <hr>
-                <footer>
-                        <p>1234 State Street, Apolis, MN 55554</p>
-                        <p>(612) 651-1234</p>
-                </footer>
-        </div>
-
+                <p>(612) 651-1234</p>
+                <p>1234 State Street, Apolis, MN 55554</p>
+                <p>Hours: Sun - Thurs: 5pm - 10pm; Fri & Sat: 5pm - 11pm</p>
+        </footer>
 </html>

@@ -2,92 +2,127 @@
 <html>
         <head>
                 <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <title>The Dining Room Restaurant & Bar - Contact Us</title>
         </head>
 
-        <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <body>
-                <h1>The Dining Room Restaurant & Bar</h1>
-
-                <div id="navigation">
-                        <hr>
-                        <table class="navigation">
-                                <tr>
-                                        <td><a href="index.html" target="_blank">Home</a></td>
-                                        <td><a href="menu.html" target="_blank">Menu</a></td>
-                                        <td><a href="contactUs.html" target="_blank">Contact Us</a></td>
-                                </tr>
-                        </table>
-                        <hr>
+        <body class="container-fluid col-md-8">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning!</strong> The features of this website may not be available if JavaScript is disabled in your browser.
                 </div>
 
-                <form class="contactForm" action="submit.html" method="post">
-                        <table>
-                                <tr>
-                                        <td class="fieldName"><label for="fullName">Name: </label></td>
-                                        <td><input type="text" id="fullName" name="fullName" required></td>
-                                </tr>
-                                <tr>
-                                        <td class="fieldName"><label for="email">Email: </label></td>
-                                        <td><input type="text" id="email" name="email" required></td>
-                                </tr>
-                                <tr>
-                                        <td class="fieldName"><label for="phone">Phone: </label></td>
-                                        <td><input type="text" id="phone" name="phone" required></td>
-                                </tr>
-                                <tr>
-                                        <td class="fieldName"><label for="inquiry">Reason for Inquiry: </label></td>
-                                        <td>
-                                                <select id="inquiry" name="inquiry">
-                                                        <option value="catering">Catering</option>
-                                                        <option value="privateParty">Private  Party</option>
-                                                        <option value="feedback">Feedback</option>
-                                                        <option value="other">Other</option>
-                                                </select>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td class="fieldName"><label for="info">Additional Information: </label></td>
-                                        <td><textarea id="info" name="info"></textarea></td>
-                                </tr>
-                                <tr>
-                                        <td class="fieldName"><legend>Have you been to the restaurant? </legend></td>
-                                        <td>
-                                                <input type="radio" id="choice1" name="haveBeen" value="no">
-                                                <label for="choice1">No</label>
-                                                <input type="radio" id="choice2" name="haveBeen" value="yes">
-                                                <label for="choice2">Yes</label>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td class="fieldName"><legend>Best days to contact you: </legend></td>
-                                        <td>
-                                                <input type="checkbox" id="monday" name="contactDays" value="monday">
-                                                <label for="monday">M</label>
-                                                <input type="checkbox" id="tuesday" name="contactDays" value="tuesday">
-                                                <label for="tuesday">T</label>
-                                                <input type="checkbox" id="wednesday" name="contactDays" value="wednesday">
-                                                <label for="wednesday">W</label>
-                                                <input type="checkbox" id="thursday" name="contactDays" value="thursday">
-                                                <label for="thursday">Th</label>
-                                                <input type="checkbox" id="friday" name="contactDays" value="friday">
-                                                <label for="friday">F</label>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td></td>
-                                        <td class="fieldName"><input type="submit" name="submit" value="Send Request"></td>
-                                </tr>
-                        </table>
+                <h1 class="display-3 text-center">The Dining Room Restaurant & Bar</h1>
+
+                <!--    Nav    -->
+                <ul class="nav nav-tabs mb-3">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_self">
+                                <svg xmlns="home.svg" width="20" height="15" viewBox="0 0 8 8">
+                                        <path d="M4 0l-4 3h1v4h2v-2h2v2h2v-4.03l1 .03-4-3z" />
+                                </svg>
+                        </a></li>
+
+                        <li class="nav-item">
+                        <a class="nav-link " href="Menu.html" target="_self">Menu</a> </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link active" href="contactUs.html" target="_self ">Contact Us</a> </li>
+                </ul>
+
+                <!--    Contact Form    -->
+                <form class="form-group" action="submit.html" method="post">
+                        <div class="form-group row">
+                                <label for="fullName" class="col-sm-3 col-form-label">Name:</label>
+                                <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="fullName" placeholder="John Doe" required>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label for="email" class="col-sm-3 col-form-label">Email:</label>
+                                <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="email" placeholder="john.doe@domain.com" required>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label for="phone" class="col-sm-3 col-form-label">Phone:</label>
+                                <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="phone" placeholder="(555) 444-3333" required>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label for="inquiry" class="col-sm-3 col-form-label">Reason for Inquiry:</label>
+                                <div class="col-sm-9">
+                                        <select class="form-control" id="inquiry" required>
+                                                <option value="catering">Catering</option>
+                                                <option value="privateParty">Private Party</option>
+                                                <option value="feedback">Feedback</option>
+                                                <option value="other">Other</option>
+                                        </select>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <label class="col-sm-3 col-form-label" for="info">Additional Information:</label>
+                                <div class="col-sm-9">
+                                        <textarea class="form-control" name="info" rows="6" cols="80"></textarea>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <legend class="col-sm-3 col-form-label">Have you been to the restaurant?:</legend>
+                                <div class="col-sm-2 form-check-label">
+                                        <input type="radio" class="form-check-imput" id="haveBeen" value="no">
+                                        <label for="choice1">No</label>
+                                </div>
+                                <div class="col-sm-2 form-check-label">
+                                        <input type="radio" class="form-check-imput" id="haveBeen" value="yes">
+                                        <label for="choice2">Yes</label>
+                                </div>
+                        </div>
+
+                        <div class="form-group row">
+                                <legend class="col-sm-3 col-form-label">Best days to contact you:</legend>
+                                <div class="col-sm-6">
+                                        <input type="checkbox" id="monday" name="contactDays" value="monday">
+                                        <label class="form-check-label pr-3" for="monday">M</label>
+
+                                        <input type="checkbox" id="tuesday" name="contactDays" value="tuesday">
+                                        <label class="form-check-label pr-3" for="tuesday">T</label>
+
+                                        <input type="checkbox" id="wednesday" name="contactDays" value="wednesday">
+                                        <label class="form-check-label pr-3" for="wednesday">W</label>
+
+                                        <input type="checkbox" id="thursday" name="contactDays" value="thursday">
+                                        <label class="form-check-label pr-3" for="thursday">Th</label>
+
+                                        <input type="checkbox" id="friday" name="contactDays" value="friday">
+                                        <label class="form-check-label pr-3" for="friday">F</label>
+                                </div>
+                        </div>
+
+                        <div class="offset-sm-5">
+                                <input type="submit" class="btn btn-primary col-offset-6" name="submit" value="Send Request">
+                        </div>
                 </form>
 
-                <div class="footer">
-                        <hr>
-                        <footer align="center">
-                                <p>1234 State Street, Apolis, MN 55554</p>
-                                <p>(612) 651-1234</p>
-                        </footer>
-                </div>
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         </body>
+
+        <!--    Footer    -->
+        <footer  class="footer-copyright py-3 text-center">
+                <hr>
+                <p>(612) 651-1234</p>
+                <p>1234 State Street, Apolis, MN 55554</p>
+                <p>Hours: Sun - Thurs: 5pm - 10pm; Fri & Sat: 5pm - 11pm</p>
+        </footer>
 </html>

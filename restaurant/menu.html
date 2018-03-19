@@ -2,107 +2,157 @@
 <html>
         <head>
                 <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                 <title>The Dining Room Restaurant & Bar - Menu</title>
         </head>
 
-        <link href="restaurantStyles.css" rel="stylesheet" type="text/css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <body>
-                <h1>The Dining Room Restaurant & Bar</h1>
-
-                <div id="navigation">
-                        <hr>
-                        <table class="navigation">
-                                <tr>
-                                        <td><a href="index.html" target="_blank">Home</a></td>
-                                        <td><a href="menu.html" target="_blank">Menu</a></td>
-                                        <td><a href="contactUs.html" target="_blank">Contact Us</a></td>
-                                </tr>
-                        </table>
-                        <hr>
+        <body class="container-fluid col-md-8">
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning!</strong> The features of this website may not be available if JavaScript is disabled in your browser.
                 </div>
 
-                <div class="main">
-                        <h2>Dinner Menu</h2>
-                        <table id="dinnerMenu">
-                                <tr>
-                                        <td >
-                                                <h3>Burger and Fries</h3>
-                                                <p>An American Classic!  Your choice - with or without cheese</p>
-                                                <p>Pickle, onion, tomato, and lettuce</p>
-                                                <p>Served with our famous thick cut french fries</p>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>
-                                                <h3>Hot Dog and Chips</h3>
-                                                <p>A Summer Classic!</p>
-                                                <p>Your choice - white or wheat bun</p>
-                                                <p>Relish, mustard, and ketchup</p>
-                                                <p>Served with our house-made chips</p>
-                                                <p>$7.95</p>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>
-                                                <h3>Italian Sausage and Peppers</h3>
-                                                <p>Al All-Time Favorite!!</p>
-                                                <p>Your choice - mild or spicy</p>
-                                                <p>Coleslaw</p>
-                                                <p>Served with garlic mashers</p>
-                                                <p>$10.95</p>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>
-                                                <h3>Tenderloin Sandwich and Chips</h3>
-                                                <p>Really Hits the Spot!</p>
-                                                <p>Plain or Sesame Seed Bun</p>
-                                                <p>Pickle, onion, tomato, and lettuce</p>
-                                                <p>Served with our house-made chips</p>
-                                                <p>$8.95</p>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>
-                                                <h3>House Salad</h3>
-                                                <p>On the Lighter Side</p>
-                                                <p>Your choice - with or without cheese</p>
-                                                <p>Iceberg lettuce, tomatoes, peppers</p>
-                                                <p>Thousand Island or Ranch Dressing</p>
-                                                <p>Served with a dinner roll</p>
-                                                <p>$6.95</p>
-                                        </td>
-                                </tr>
-                                <tr>
-                                        <td>
-                                                <h3>Brisket Sandwich</h3>
-                                                <p>A Taste of Texas!</p>
-                                                <p>Smoked Brisket on thick-cut Texas Toast</p>
-                                                <p>Cole Slaw</p>
-                                                <p>Served with our famous thick-cut french fries</p>
-                                                <p>$7.95</p>
-                                        </td>
-                                </tr>
-                        </table><hr>
+                <h1 class="display-2 text-center">The Dining Room Restaurant & Bar</h1><br>
 
-                        <table id="beverageMenu">
-                                <h2>Beverage Menu</h2>
-                                <tr>
-                                        <td><h3>Root Beer</h3><p>$3.00</p></td>
-                                        <td><h3>Bottled Water</h3><p>$1.25</p></td>
-                                        <td><h3>Lemonade</h3><p>$1.00</p></td>
-                                        <td><h3>Iced Tea</h3><p>$1.25</p></td>
-                                </tr>
-                        </table>
+                <!--    Nav    -->
+                <ul class="nav nav-tabs mb-3">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_self">
+                                <svg xmlns="home.svg" width="20" height="15" viewBox="0 0 8 8">
+                                        <path d="M4 0l-4 3h1v4h2v-2h2v2h2v-4.03l1 .03-4-3z" />
+                                </svg>
+                        </a></li>
+
+                        <li class="nav-item">
+                        <a class="nav-link active" href="Menu.html" target="_self">Menu</a> </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html" target="_self">Contact Us</a> </li>
+                </ul>
+
+                <h2 class="display-4 text-center">Seasonal Specials</h2>
+
+                <!--    Special Menu Carousel    -->
+                <div class="text-center" id="main">
+                        <div id="specials" class="carousel slide" data-ride="carousel">
+                                <!--    Indicators    -->
+                                <ul class="carousel-indicators">
+                                        <li data-target="#specials" data-slide-to="0" class="active"></li>
+                                        <li data-target="#specials" data-slide-to="1"></li>
+                                        <li data-target="#specials" data-slide-to="2"></li>
+                                </ul>
+
+                                <!--    Slideshow    -->
+                                <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item active">
+                                                <img class="d-block w-100" src="images/seafoodMac.jpg" alt="Seafood Mac & Cheese" height="500">
+                                                <div class="carousel-caption">
+                                                        <h4>Seafood Mac & Cheese</h4>
+                                                        <p>With shrimp, lobster, and scallops</p>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <img class="d-block w-100" src="images/halfChicken.jpg" alt="Chicken Entree" height="500">
+                                                <div class="carousel-caption">
+                                                        <h4>Half Chicken Gyro</h4>
+                                                        <p>Served with cous cous, sliced lamb, and roasted onions</p>
+                                                </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                                <img class="d-block w-100" src="images/burrataSalad.jpg" alt="SG Special Brew" height="500">
+                                                <div class="carousel-caption">
+                                                        <h4>Burrata Salad</h4>
+                                                        <p>Served with squash, spring greens, and balsamic</p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <!--    Left and right controls    -->
+                                <a class="carousel-control-prev" href="#specials" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#specials" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"s></span>
+                                </a>
+                        </div>
                 </div>
 
-                <div class="footer">
-                        <hr>
-                        <footer>
-                                <p>1234 State Street, Apolis, MN 55554</p>
-                                <p>(612) 651-1234</p>
-                        </footer>
+                <!--   Dinner Menu    -->
+                <div class="text-center">
+                        <h2 class="display-4">Dinner Menu</h2>
+                        <ul class="list-group" style="list-style: none">
+                                <li>
+                                        <h3>Burger and Fries</h3>
+                                        <p>An American Classic!  Your choice - with or without cheese</p>
+                                        <p>Pickle, onion, tomato, and lettuce</p>
+                                        <p>Served with our famous thick cut french fries</p>
+                                        <p>$7.95</p>
+
+                                        <h3>Hot Dog and Chips</h3>
+                                        <p>A Summer Classic!</p>
+                                        <p>Your choice - white or wheat bun</p>
+                                        <p>Relish, mustard, and ketchup</p>
+                                        <p>Served with our house-made chips</p>
+                                        <p>$7.95</p>
+
+                                        <h3>Italian Sausage and Peppers</h3>
+                                        <p>Al All-Time Favorite!!</p>
+                                        <p>Your choice - mild or spicy</p>
+                                        <p>Coleslaw</p>
+                                        <p>Served with garlic mashers</p>
+                                        <p>$10.95</p>
+
+                                        <h3>Tenderloin Sandwich and Chips</h3>
+                                        <p>Really Hits the Spot!</p>
+                                        <p>Plain or Sesame Seed Bun</p>
+                                        <p>Pickle, onion, tomato, and lettuce</p>
+                                        <p>Served with our house-made chips</p>
+                                        <p>$8.95</p>
+
+                                        <h3>House Salad</h3>
+                                        <p>On the Lighter Side</p>
+                                        <p>Your choice - with or without cheese</p>
+                                        <p>Iceberg lettuce, tomatoes, peppers</p>
+                                        <p>Thousand Island or Ranch Dressing</p>
+                                        <p>Served with a dinner roll</p>
+                                        <p>$6.95</p>
+
+                                        <h3>Brisket Sandwich</h3>
+                                        <p>A Taste of Texas!</p>
+                                        <p>Smoked Brisket on thick-cut Texas Toast</p>
+                                        <p>Cole Slaw</p>
+                                        <p>Served with our famous thick-cut french fries</p>
+                                        <p>$7.95</p>
+
+                                        <td><h3>Beverages</h3></td>
+                                        <table class="table">
+                                                <tbody>
+                                                        <tr>
+                                                                <td class="py-3"><h5>Root Beer</h5><p>$3.00</p></td>
+                                                                <td class="py-3"><h5>Bottled Water</h5><p>$1.25</p></td>
+                                                                <td class="py-3"><h5>Lemonade</h5><p>$1.00</p></td>
+                                                                <td class="py-3"><h5>Iced Tea</h5><p>$1.25</p></td>
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+                                </li>
+                        </ul>
                 </div>
+
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         </body>
+
+        <!--    Footer    -->
+        <footer  class="footer-copyright py-3 text-center">
+                <hr>
+                <p>(612) 651-1234</p>
+                <p>1234 State Street, Apolis, MN 55554</p>
+                <p>Hours: Sun - Thurs: 5pm - 10pm; Fri & Sat: 5pm - 11pm</p>
+        </footer>
 </html>
