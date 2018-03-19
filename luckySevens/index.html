@@ -11,7 +11,7 @@
         <body class="container-fluid col-md-5">
                 <h1 class="display-4">Lucky Sevens</h1><br>
 
-                <form name="play" class="form-inline" onsubmit="" onreset="">
+                <form name="sevensBet" class="form-inline" onsubmit="play();" onreset="playAgain();">
                         <div class="input-group-prepend">
                                 <label for="bet" class="col-form-label">Starting Bet:</label>
                         </div>
@@ -22,9 +22,9 @@
                 </form><br>
 
                 <div class="col-sm-5">
-                        <h2 class="text-center">Results</h2>
+                        <h2 class="text-center" id="resultsHeader "style="display: none">Results</h2>
                 </div>
-                <table class="table table-hover table-bordered" id="results">
+                <table class="table table-hover table-bordered" id="results" style="display: none">
                         <thead class="thead-dark">
                                 <tr>
                                         <th>Starting Bet</th>
