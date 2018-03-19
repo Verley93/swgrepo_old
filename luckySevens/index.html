@@ -13,36 +13,36 @@
 
                 <form name="play" class="form-inline" onsubmit="" onreset="">
                         <div class="input-group-prepend">
-                                <label for="num1" class="col-form-label">Starting Bet:</label>
+                                <label for="bet" class="col-form-label">Starting Bet:</label>
                         </div>
-                        <input type="number" class="form-control" id="num1" placeholder="$0.00">
+                        <input type="number"  step=".01" class="form-control" id="bet" placeholder="$0.00">
                         <div class="input-group-append">
-                                <button type="submit" id="submitButton" class="btn btn-default">Play</button>
+                                <button type="submit" id="playButton" class="btn btn-default">Play</button>
                         </div>
                 </form><br>
 
                 <div class="col-sm-5">
                         <h2 class="text-center">Results</h2>
                 </div>
-                <table class="table table-hover">
+                <table class="table table-hover table-bordered" id="results">
                         <thead class="thead-dark">
                                 <tr>
                                         <th>Starting Bet</th>
-                                        <td></td>
+                                        <td><span id="startingBet"></span></td>
                                 </tr>
                         </thead>
                         <tbody>
                                 <tr>
                                         <th>Total Rolls Before Going Broke</th>
-                                        <td></td>
+                                        <td><span id="totalRolls"></span></td>
                                 </tr>
                                 <tr>
                                         <th>Highest Amount Won</th>
-                                        <td></td>
+                                        <td><span id="highestWon"></span></td>
                                 </tr>
                                 <tr>
                                         <th>Roll Count at Highest Amount Won</th>
-                                        <td></td>
+                                        <td><span id="rollCountAtHighest"></span></td>
                                 </tr>
 
                         </tbody>
