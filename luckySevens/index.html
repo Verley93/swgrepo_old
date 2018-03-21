@@ -8,27 +8,37 @@
                 <title>Lucky Sevens</title>
         </head>
 
-        <body class="container-fluid col-md-5">
+        <body class="container-fluid col-md-5" onload="hideResults()">
+                <div id="warning" class="alert alert-warning alert-dismissible fade show" role="alert" style="display: none">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>Warning!</strong> You must enter a value greater than zero.
+                </div>
+
                 <h1 class="display-4">Lucky Sevens</h1><br>
 
-                <form name="sevensBet" class="form-inline" onsubmit="play();" onreset="playAgain();">
+                <form name="sevensBet" class="form-inline">
                         <div class="input-group-prepend">
                                 <label for="bet" class="col-form-label">Starting Bet:</label>
                         </div>
                         <input type="number"  step=".01" class="form-control" id="bet" placeholder="$0.00">
                         <div class="input-group-append">
-                                <button type="submit" id="playButton" class="btn btn-default">Play</button>
+                                <button onclick="play()" id="playButton" class="btn btn-default">Play</button>
+                        </div>
+                        <div class="input-group-append">
+                                <button onclick="hideResults() play()" id="playAgainButton" class="btn btn-default">Play Again</button>
                         </div>
                 </form><br>
 
                 <div class="col-sm-5">
-                        <h2 class="text-center" id="resultsHeader "style="display: none">Results</h2>
+                        <h2 class="text-center" id="resultsHeader">Results</h2>
                 </div>
-                <table class="table table-hover table-bordered" id="results" style="display: none">
+                <table class="table table-hover table-bordered" id="results">
                         <thead class="thead-dark">
                                 <tr>
                                         <th>Starting Bet</th>
-                                        <td><span id="startingBet"></span></td>
+                                        <th><span id="startingBet"></span></th>
                                 </tr>
                         </thead>
                         <tbody>

@@ -1,85 +1,83 @@
 //    Play    //
 function play() {
         var bet = document.forms["sevensBet"]["bet"].value;
+
+        if (bet <= 0) {
+                document.getElementById("warning").style.display = "inline";
+                return event.preventDefault();
+        }
+
         var startingBet = bet;
         var balance = bet;
-        var highestWon = 0;
-        var rollCountAtHighest = 0;
-        var diceSum = 0;
+        var balanceArray = [];
 
-        if (bet = 0) {
-                validateItems();
+        //    Roll Two Die    //
+        function rollDice() {
+                var dice1 = Math.ceil(Math.random() * (1 + 6 - 1));
+                var dice2 = Math.ceil(Math.random() * (1 + 6 - 1));
+                var diceSum = dice1 + dice2;
+                return diceSum;
         }
-        if (bet > 0) {
-                do {
-                        rollDice();
-                        console.log("Dice Sum: " + diceSum);
-                        if (diceSum == 7) {
-                                balance += 4;
-                                console.log("Balance: " + balance);
-                                if (balance > highestWon) {
-                                        highestWon = balance;
-                                        rollCountAtHighest = totalRolls;
-                                }
-                                totalRolls++;
-                        }
-                        else {
-                                balance -= 1;
-                                console.log("Balance: " + balance);
-                        }
-                } while (balance > 0);
-                if (balance = 0) {
-                        printResults();
+
+        do {
+                var dice = rollDice();
+
+                if (dice == 7) {
+                        balance += 4;    // Add $4 to the balance if the dice pair = 7
                 }
-        }
-}
-
-//    Roll Two Dice    //
-function rollDice() {
-        var dice1 = Math.ceil(Math.random() * (1 + 6 - 1));
-        var dice2 = Math.ceil(Math.random() * (1 + 6 - 1));
-        var diceSum = dice1 + dice2;
-        return diceSum;
-}
-
-//    Print Results    //
-function printResults() {
-        // Insert show table and results here
-        playAgain();
-}
-
-//    Clear Errors    //
-function clearErrors() {
-        for (var loopCounter = 0; loopCounter < document.forms["play"].elements.length; loopCounter++) {
-        if (document.forms["play"].elements[loopCounter].parentElement.className.indexOf("has-") != -1) {
-                        document.forms["play"].elements[loopCounter].parentElement.className = "form-group";
+                else {
+                        balance--;    // Subtract $1 to the balance if the dice pair != 7
                 }
+
+                balanceArray.push(balance);
+        } while (balance > 0);
+
+        var totalRolls = balanceArray.length + 1;    // Total rolls equal to the length of balanceArray + 1
+        var highestWon = Math.max.apply(Math, balanceArray);    // Determines max value of balanceArray
+        var rollCountAtHighest = balanceArray.indexOf(highestWon);    // Determines index at max of balanceArray
+
+        //    Show Results    //
+        function showResults() {
+                document.getElementById("playButton").style.display = "none";
+                document.getElementById("playAgainButton").style.display = "inline";
+                document.getElementById("resultsHeader").style.display = "inline";
+                document.getElementById("results").style.display = "inline";
+
+                if (startingBet < 10) {
+                        // Floats 3 decimals if less than $10.00
+                        document.getElementById("startingBet").innerText = "$" + parseFloat(startingBet).toPrecision(3);
+                }
+                else {
+                        // Floats 4 decimals if greater than $10.00
+                        document.getElementById("startingBet").innerText = "$" + parseFloat(startingBet).toPrecision(4);
+                }
+
+                document.getElementById("totalRolls").innerText = totalRolls;
+
+                if (highestWon < 10) {
+                        // Floats 3 decimals if less than $10.00
+                        document.getElementById("highestWon").innerText = "$" + parseFloat(highestWon).toPrecision(3);
+                }
+                else {
+                        // Floats 4 decimals if greater than $10.00
+                        document.getElementById("highestWon").innerText = "$" + parseFloat(highestWon).toPrecision(4);
+                }
+
+                document.getElementById("rollCountAtHighest").innerText = rollCountAtHighest;
+                // console.log(balanceArray);  // This can be used to match highestWon to its index (rollCountAtHighest)
+                event.preventDefault();
         }
+
+        if (balance <= 0) {
+                showResults();
+        }
+        event.preventDefault();
 }
 
-//    Validate Entry    //
-function validateItems() {
-        clearErrors();
-        var bet = document.forms["play"].value;
-        if (bet == "" || isNaN(bet)) {
-                alert("Bet must be filled in with a number.");
-                document.forms["play"]["bet"].parentElement.className = "form-group has-error";
-                document.forms["play"]["bet"].focus();
-                return false;
-        }
-        else if (bet == 0) {
-                alert("Bet must be filled in with a number greater than zero.");
-                document.forms["play"]["bet"].parentElement.className = "form-group has-error";
-                document.forms["play"]["bet"].focus();
-                return false;
-        }
-}
-
-//    Play Again    //
-function playAgain() {
-        clearErrors();
-        document.forms["play"].value = "";
+//    Hide Results    //
+function hideResults() {
+        document.forms["sevensBet"]["bet"].value = "";
+        document.getElementById("playAgainButton").style.display = "none";
+        document.getElementById("resultsHeader").style.display = "none";
         document.getElementById("results").style.display = "none";
-        document.getElementById("playButton").innerText = "Play Again";
-        document.forms["play"].focus();
 }
